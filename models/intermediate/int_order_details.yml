@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: int_order_details
+    description: This is the intermediate model for order details from the classic_models database
+    tests:
+      # Single column constraints
+      - dbt_constraints.primary_key:
+          column_names:
+            - ORDER_DETAIL_HK
+      - dbt_constraints.unique_key:
+          column_names:
+            - ORDER_DETAIL_HK
