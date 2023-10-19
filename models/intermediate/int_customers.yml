@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: int_customers
+    description: This is the customer model for products from the classic_models database
+    tests:
+      # Single column constraints
+      - dbt_constraints.primary_key:
+          column_names:
+            - CUSTOMER_HK
+      - dbt_constraints.unique_key:
+          column_names:
+            - CUSTOMER_HK
